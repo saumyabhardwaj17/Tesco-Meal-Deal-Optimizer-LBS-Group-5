@@ -215,6 +215,9 @@ if submitted:
     }
 
     mains, snacks, drinks = load_data()
+    if params is None:
+        st.error("Params not created properly")
+        st.stop()
     result = solve_meal_deal(mains, snacks, drinks, params)
 
     if result is None:
