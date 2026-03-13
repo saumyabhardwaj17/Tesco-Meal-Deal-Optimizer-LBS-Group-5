@@ -90,6 +90,9 @@ def load_data(file_path="meal_deal_data.xlsx"):
 
 
 def solve_meal_deal(mains, snacks, drinks, params):
+    if params is None:
+        params = {}
+        
     model = gp.Model("tesco_meal_deal")
     model.setParam("OutputFlag", 0)
 
